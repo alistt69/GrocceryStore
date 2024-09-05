@@ -1,0 +1,90 @@
+.menu__container {
+    justify-self: end;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    width: 550px;
+    margin-right: 13px;
+}
+
+.menu__navigation {
+    position: relative;
+    height: 72px;
+    border-radius: 8px;
+    font-size: 0;
+    font-family: "Raleway", sans-serif;
+}
+
+.menu__navigation a {
+    line-height: 50px;
+    margin: 33px 0 0;
+    text-align: center;
+    height: 100%;
+    font-size: 15px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+}
+
+.menu__navigation .animation {
+    position: absolute;
+    height: 40px;
+    top: 49.5%;
+    z-index: 0;
+    transition: all .5s ease 0s;
+    border-radius: 8px;
+}
+
+.menu__navigation a:nth-child(1) {
+    width: 100px;
+}
+
+.menu__navigation a:nth-child(2) {
+    width: 110px;
+}
+
+.menu__navigation a:nth-child(3) {
+    width: 120px;
+}
+
+.menu__navigation a:nth-child(4) {
+    width: 80px;
+}
+
+.menu__navigation a:nth-child(5) {
+    width: 100px;
+}
+
+.menu__navigation .menu__firstItem, a:nth-child(1):hover~.animation {
+    width: 100px;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.menu__navigation .menu__secondItem, a:nth-child(2):hover~.animation {
+    width: 110px;
+    left: 100px;
+    background-color: black;
+}
+
+.menu__navigation .menu__thirdItem, a:nth-child(3):hover~.animation {
+    width: 120px;
+    left: 210px;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.menu__navigation .menu__fourthItem, a:nth-child(4):hover~.animation {
+    width: 80px;
+    left: 330px;
+    background-color: black;
+}
+
+.menu__navigation .menu__fifthItem, a:nth-child(5):hover~.animation {
+    width: 100px;
+    left: 410px;
+    background-color: rgba(255, 255, 255, 0.25);
+}

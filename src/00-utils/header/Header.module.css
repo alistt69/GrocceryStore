@@ -1,0 +1,45 @@
+.header__container {
+    display: grid;
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.64);
+}
+
+.header__logoContainer {
+    width: 210px;
+    border-radius: 10px;
+    transition: background-color 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header__logoContainer:hover {
+    transform: scale(1.01);
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.header__logoImageContainer {
+    display: inline-block;
+}
+
+.header__logoImage {
+    height: 60px;
+    width: 60px;
+}
+
+.header__logoTextContainer {
+    display: inline-block;
+}
+
+.header__logoTextContainer p {
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    color: #fefefe;
+}

@@ -1,0 +1,173 @@
+body {
+    font-family: arial, helvetica, serif;
+}
+
+
+
+#first {
+    align-items: center;
+}
+
+
+#about-page1 .fp-overflow {
+    display: flex;
+    padding-top: 90px;
+    height: 100%;
+    background-image: linear-gradient(180deg, rgb(225, 188, 188), rgb(229, 194, 226), rgb(208, 201, 224));
+}
+
+#about-page2 .fp-overflow {
+    display: flex;
+    padding-top: 90px;
+    height: 100%;
+    background-image: linear-gradient(180deg,  rgb(208, 201, 224), rgb(203, 201, 229), rgb(197, 224, 219));
+}
+
+#about-page3 .fp-overflow {
+    display: flex;
+    padding-top: 90px;
+    height: 100%;
+    background-image: linear-gradient(180deg, rgb(197, 224, 219), rgb(200, 229, 202), rgb(220, 213, 191));
+}
+
+#about-page4 .fp-overflow {
+    background-image: linear-gradient(180deg, rgb(220, 213, 191), rgb(224, 215, 199));
+}
+
+.fp-section:nth-child(1){
+    background-image: linear-gradient(180deg, rgb(225, 188, 188), rgb(229, 194, 226), rgb(208, 201, 224));
+}
+
+.fp-section:nth-child(2){
+    background-image: linear-gradient(180deg,  rgb(208, 201, 224), rgb(203, 201, 229), rgb(197, 224, 219));
+}
+
+.fp-section:nth-child(3){
+    background-image: linear-gradient(180deg, rgb(197, 224, 219), rgba(194, 222, 196, 0.88));
+    border-top: 1px solid rgba(0, 0, 0, 0.7);
+}
+
+
+.ant-drawer-body {
+    background-image: linear-gradient(180deg, rgba(217, 211, 227, 0.95), rgba(225, 205, 220, 0.95), rgba(225, 206, 206, 0.95));
+}
+
+.ant-drawer-header {
+    background-image: linear-gradient(180deg, rgba(191, 195, 217, 0.74), rgba(217, 211, 227, 0.95));
+}
+
+.ant-drawer-content {
+    border-left: 2px solid rgba(0, 0, 0, 0.3);
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.ant-collapse-content-box {
+    background-color: #d9d1e0;
+}
+
+
+
+
+
+
+
+
+
+.anticon-truck svg,
+.anticon-safety svg,
+.anticon-comment svg,
+.anticon-lock svg,
+.anticon-monitor svg {
+    height: 70px;
+    width: 70px;
+    padding: 0;
+}
+
+.anticon-sun svg,
+.anticon-home svg,
+.anticon-rest svg {
+    height: 60px;
+    width: 69px;
+    padding: 0;
+}
+
+/*.anticon-shopping {
+    height: 50px;
+    width: 150px;
+    color: #d8e7dd;
+    border: 3px solid #cdeade;
+    background: rgb(73, 141, 105);
+    place-content: center;
+    transition: transform 0.3s ease;
+
+}*/
+
+.anticon-shopping svg {
+    height: 42px;
+    width: 42px;
+    margin: 0;
+}
+
+/*.anticon-shopping:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}*/
+
+
+
+.fp-watermark {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
+
+.ant-btn {
+    display: none;
+}
+
+.modalCart .ant-modal-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    height: 550px;
+    border-radius: 10px;
+}
+
+
+
+.ant-notification-notice-message {
+    font-weight: bold;
+}
+
+.ant-notification-notice-description {
+    font-weight: 550;
+}
+
+.custom-notification {
+    background-color: rgba(225, 223, 227, 0.57);
+    border-radius: 9px;
+    font-family: "Raleway", sans-serif;
+}
+
+
+.anticon-mobile svg,
+.anticon-mail svg,
+.anticon-facebook svg,
+.anticon-x svg,
+.anticon-instagram svg {
+    height: 23px;
+    width: 23px;
+    color: rgba(0, 0, 0, 0.7);
+}

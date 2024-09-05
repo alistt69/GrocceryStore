@@ -1,0 +1,67 @@
+.catalogNavigation__container {
+    list-style-type: none;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 1.5%;
+    transform: translate(0, -53.1%);
+    z-index: 10;
+}
+
+.catalogNavigation__container li a {
+    text-decoration: none;
+    display: inline-block;
+    margin: 0;
+    color: #000;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-right: 1px solid rgba(0, 0, 0, 0.61);
+    transition: background 0.30s;
+}
+
+.catalogNavigation__titleCard {
+    font-size: 73px;
+    letter-spacing: 6px;
+    padding: 5px 16px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 550;
+    margin: 10px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.34);
+    transition: background-color 0.9s ease;
+}
+
+.catalogNavigation__defaultCard {
+    font-family: "Raleway", sans-serif;
+    margin: 10px 10px;
+    height: 77px;
+    width: 385px;
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.34);
+    display: grid;
+    grid-template-columns: 80px 350px;
+    grid-column-gap: 25px;
+    transition: background-color 0.15s ease;
+
+}
+
+.defaultCard__iconContainer {
+    place-content: center;
+    text-align: center;
+    padding-left: 13px;
+    padding-bottom: 0;
+    font-size: 30px;
+}
+
+.defaultCard__textContainer {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.defaultCard__textContainer div{
+    display: inline-block;
+}
+
