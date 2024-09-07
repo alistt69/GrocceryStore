@@ -4,7 +4,7 @@ import App from './App.tsx'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css'
 import "overlayscrollbars/overlayscrollbars.css";
-import AboutPage from "./04-pages/01-about-page/00-01-About.tsx";
+import AboutPage from "./pages/about-page/aboutPage.tsx";
 
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

@@ -1,0 +1,38 @@
+.aboutPage__slidesContentContainer {
+    justify-self: center;
+    width: 100%;
+    height: auto;
+    max-height: 69vh;
+    margin: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.3);
+    color: rgba(255, 255, 255, 0.91);
+    border-radius: 10px;
+    padding: 10px;
+    font-family: "Raleway", sans-serif;
+
+}
+
+.aboutPage__slidesTitleContainer p {
+    font-weight: 500;
+    font-size: 50px;
+    letter-spacing: 2px;
+    margin: 0 0 0 7px;
+}
+
+.aboutPage__slidesDescriptionContainer {
+    width: 90%;
+    font-size: 17px;
+}
+
+.aboutPage__slidesDescriptionContainer p {
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.aboutPage__slidesDescriptionContainer p:hover {
+    transform: scale(1.004);
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.15);
+}

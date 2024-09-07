@@ -1,11 +1,5 @@
 body {
-    font-family: arial, helvetica, serif;
-}
-
-
-
-#first {
-    align-items: center;
+    font-family: "Raleway", sans-serif;
 }
 
 
@@ -29,6 +23,7 @@ body {
     height: 100%;
     background-image: linear-gradient(180deg, rgb(197, 224, 219), rgb(200, 229, 202), rgb(220, 213, 191));
 }
+
 
 #about-page4 .fp-overflow {
     background-image: linear-gradient(180deg, rgb(220, 213, 191), rgb(224, 215, 199));
@@ -67,13 +62,6 @@ body {
 }
 
 
-
-
-
-
-
-
-
 .anticon-truck svg,
 .anticon-safety svg,
 .anticon-comment svg,
@@ -92,28 +80,12 @@ body {
     padding: 0;
 }
 
-/*.anticon-shopping {
-    height: 50px;
-    width: 150px;
-    color: #d8e7dd;
-    border: 3px solid #cdeade;
-    background: rgb(73, 141, 105);
-    place-content: center;
-    transition: transform 0.3s ease;
-
-}*/
 
 .anticon-shopping svg {
     height: 42px;
     width: 42px;
     margin: 0;
 }
-
-/*.anticon-shopping:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-}*/
-
 
 
 .fp-watermark {
