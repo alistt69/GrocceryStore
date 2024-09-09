@@ -1,7 +1,11 @@
 import classes from "./classes.module.css";
 import React from "react";
 
-const Test2: React.FC<{ products: any, handleAmountChange: (key: string, productName: string, operation: number, productPrice: number) => void }> = ({ products, handleAmountChange }) => {
+const CartProducts: React.FC<{
+    products: any,
+    handleAmountChange: (key: string, productName: string, operation: number, productPrice: number) => void 
+}> = ({ products, handleAmountChange }) => {
+
     return(
         <>
             <div id="scrollable-element" className={classes.modalCart__items}>
@@ -52,4 +56,4 @@ const Test2: React.FC<{ products: any, handleAmountChange: (key: string, product
 
 }
 
-export default Test2;
+export default CartProducts;

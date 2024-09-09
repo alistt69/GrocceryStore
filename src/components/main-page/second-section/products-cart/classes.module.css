@@ -1,5 +1,5 @@
 .modalCart__items {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.8);
     height: 78%;
     margin-bottom: 10px;
     overflow-y: auto;
@@ -79,5 +79,4 @@
 .itemCard__amountContainer button:hover {
     cursor: pointer;
     background: rgba(255, 255, 255, 0.38);
-
 }

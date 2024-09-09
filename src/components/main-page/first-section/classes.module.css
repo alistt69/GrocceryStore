@@ -1,0 +1,45 @@
+.firstSection__container {
+    width: 100%;
+    max-width: 1352px;
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.3);
+    color: rgba(255, 255, 255, 0.91);
+    border-radius: 10px;
+    padding: 1.5rem;
+    position: relative;
+    font-family: "Raleway", sans-serif;
+    display: grid;
+    grid-template-rows: auto auto;
+    overflow: hidden;
+}
+
+.title {
+    text-align: start;
+    font-family: var(--font), sans-serif;
+    font-weight: 625;
+    font-size: 4.3vw;
+    letter-spacing: 1px;
+    color: #ececec;
+}
+
+.text {
+    text-align: start;
+    color: rgba(255, 255, 255, 0.56);
+    margin-left: 15px;
+    margin-top: 7px;
+    font-family: var(--font), sans-serif;
+    font-weight: 400;
+    font-size: 2vw;
+    letter-spacing: 0.07vw;
+}
+
+.image {
+    position: absolute;
+    height: 40vw;
+    width: 40vw;
+    left: 92%;
+    top: 55%;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    opacity: 0.1;
+}

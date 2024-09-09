@@ -24,9 +24,9 @@ const items: CollapseProps['items'] = [
 
 const MainMenu = () => {
 
-    const [activeTab, setActiveTab] = useState<any>(classes.headerMenu__firstItem)
+    const [activeTab, setActiveTab] = useState(classes.headerMenu__firstItem)
 
-    const handleTabChange = (newTab: any) => {
+    const handleTabChange = (newTab: string) => {
         setActiveTab(newTab);
     }
 

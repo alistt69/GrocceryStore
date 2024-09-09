@@ -1,10 +1,11 @@
 import classes from './index.module.css'
+import React from "react";
 
 type SlideKeys = 'about' | 'ourTeam' | 'promocodes';
 
 const Slides = () => {
 
-    const slides: Record<SlideKeys, any> = {
+    const slides: Record<SlideKeys, React.ReactNode> = {
         about: <>
             <p>1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
                 et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -116,20 +117,20 @@ const Slides = () => {
         <>
             {Object.keys(slides).map((key, index) => (
                 <div key={index} className="section" id={`about-page${index + 1}`}>
-
                     <div className={classes.aboutPage__slidesContentContainer}>
+
                         <div className={classes.aboutPage__slidesTitleContainer}>
                             <p>{key.replace(/([A-Z])/g, ' $1').trim().toUpperCase()}</p>
                         </div>
-
                         <div className={classes.aboutPage__slidesDescriptionContainer}>
                             {slides[key as SlideKeys]}
                         </div>
-                    </div>
 
+                    </div>
                 </div>
             ))}
         </>
     )
 }
+
 export default Slides;

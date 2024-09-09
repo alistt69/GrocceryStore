@@ -1,42 +1,3 @@
-.ShoppingCartContainer {
-    font-family: "Raleway", sans-serif;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    bottom: -1%;
-    right: -1%;
-    z-index: 100;
-    margin-right: 10px;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.27);
-    border: 3px solid rgba(84, 80, 101, 0.5);
-    border-radius: 130px;
-    align-self: center;
-    color: rgba(84, 80, 101, 0.63);
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.34);
-    transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-}
-
-.ShoppingCartContainer:hover {
-    background: rgba(110, 109, 112, 0.5);
-    color: rgba(225, 223, 227, 0.75);
-    border-color: rgba(225, 223, 227, 0.82);
-}
-
-.ShoppingCartAmount {
-    display: none;
-}
-
-.modalCart__header {
-    background: #c4c3c9;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    height: 55px;
-    color: rgba(0, 0, 0, 0.69);
-    font-family: "Raleway", sans-serif;
-    font-weight: 640;
-    font-size: 35px;
-}
-
 .modalCart__body {
     display: grid;
     color: #cdeade;
@@ -50,17 +11,15 @@
     margin: 2px 0 0 0;
 }
 
-
-
 .modalCart__totalPrice {
-    background-color: rgba(255, 255, 255, 0.56);
-    height: 14.3%;
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 11.9%;
     width: auto;
     border-bottom-left-radius: 8px;
-    padding-top: 6px;
+    padding-top: 16px;
     padding-left: 20px;
     color: rgba(0, 0, 0, 0.65);
-    font-weight: 469;
+    font-weight: 475;
     font-size: 30px;
     letter-spacing: 2px;
     font-family: "Raleway", sans-serif;
@@ -72,7 +31,7 @@
 }
 
 .modalCart__orderInfo {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 5px 17px 17px;
 }
 
@@ -214,7 +173,7 @@ input[type="radio"]:checked + .orderInfo__customRadio::after {
 }
 
 .orderInfo__btnContainer {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
     place-content: center;
     height: 72px;

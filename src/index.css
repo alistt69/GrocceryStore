@@ -1,3 +1,10 @@
+:root {
+    --first-bg: linear-gradient(180deg, rgb(225, 188, 188), rgb(229, 194, 226), rgb(208, 201, 224));
+    --second-bg: linear-gradient(180deg,  rgb(208, 201, 224), rgb(203, 201, 229), rgb(197, 224, 219));
+    --third-bg: linear-gradient(180deg, rgb(197, 224, 219), rgb(200, 229, 202), rgb(220, 213, 191));
+}
+
+
 body {
     font-family: "Raleway", sans-serif;
 }
@@ -7,34 +14,42 @@ body {
     display: flex;
     padding-top: 90px;
     height: 100%;
-    background-image: linear-gradient(180deg, rgb(225, 188, 188), rgb(229, 194, 226), rgb(208, 201, 224));
+    background-image: var(--first-bg);
 }
 
 #about-page2 .fp-overflow {
     display: flex;
     padding-top: 90px;
     height: 100%;
-    background-image: linear-gradient(180deg,  rgb(208, 201, 224), rgb(203, 201, 229), rgb(197, 224, 219));
+    background-image: var(--second-bg);
 }
 
 #about-page3 .fp-overflow {
     display: flex;
     padding-top: 90px;
     height: 100%;
-    background-image: linear-gradient(180deg, rgb(197, 224, 219), rgb(200, 229, 202), rgb(220, 213, 191));
+    background-image: var(--third-bg);
 }
-
 
 #about-page4 .fp-overflow {
     background-image: linear-gradient(180deg, rgb(220, 213, 191), rgb(224, 215, 199));
 }
 
-.fp-section:nth-child(1){
-    background-image: linear-gradient(180deg, rgb(225, 188, 188), rgb(229, 194, 226), rgb(208, 201, 224));
+
+#main-page1 .fp-overflow{
+    display: flex;
+    place-content: center;
+    padding: 105px 15px;
+    height: 90%;
+    background-image: var(--first-bg);
 }
 
-.fp-section:nth-child(2){
-    background-image: linear-gradient(180deg,  rgb(208, 201, 224), rgb(203, 201, 229), rgb(197, 224, 219));
+#main-page2 .fp-overflow {
+    display: flex;
+    place-content: center;
+    padding: 105px 15px;
+    height: 90%;
+    background-image: var(--second-bg);
 }
 
 .fp-section:nth-child(3){
@@ -61,44 +76,9 @@ body {
     background-color: #d9d1e0;
 }
 
-
-.anticon-truck svg,
-.anticon-safety svg,
-.anticon-comment svg,
-.anticon-lock svg,
-.anticon-monitor svg {
-    height: 70px;
-    width: 70px;
-    padding: 0;
-}
-
-.anticon-sun svg,
-.anticon-home svg,
-.anticon-rest svg {
-    height: 60px;
-    width: 69px;
-    padding: 0;
-}
-
-
-.anticon-shopping svg {
-    height: 42px;
-    width: 42px;
-    margin: 0;
-}
-
-
 .fp-watermark {
     display: none;
 }
-
-
-
-
-
-
-
-
 
 
 ::-webkit-scrollbar {
@@ -111,12 +91,11 @@ body {
 }
 
 .modalCart .ant-modal-content {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.38);
     padding: 10px;
     height: 550px;
     border-radius: 10px;
 }
-
 
 
 .ant-notification-notice-message {
@@ -133,13 +112,3 @@ body {
     font-family: "Raleway", sans-serif;
 }
 
-
-.anticon-mobile svg,
-.anticon-mail svg,
-.anticon-facebook svg,
-.anticon-x svg,
-.anticon-instagram svg {
-    height: 23px;
-    width: 23px;
-    color: rgba(0, 0, 0, 0.7);
-}

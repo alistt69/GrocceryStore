@@ -1,0 +1,11 @@
+.modalCart__header {
+    background: #eaeaea;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 55px;
+    color: rgba(0, 0, 0, 0.69);
+    font-family: "Raleway", sans-serif;
+    font-weight: 640;
+    font-size: 35px;
+}
+

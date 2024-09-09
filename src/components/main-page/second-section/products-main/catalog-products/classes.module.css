@@ -1,41 +1,16 @@
-.SecondSectionContainer {
-    display: grid;
-    grid-template-columns: 485px auto;
-    justify-items: center;
-    font-family: "Raleway", sans-serif;
-    margin: 20px 15px;
-    border-radius: 10px;
-    padding: 30px 10px;
-    color: rgba(255, 255, 255, 0.91);
-}
-
-.EContainer {
-    color: transparent;
-}
-
-
-.SlideCardsContainer {
-    width: 97%;
-    color: #d2d2d2;
-    border: 1px solid rgba(0, 0, 0, 0.7);
-    background-color: transparent;
-    height: 450px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.34);
-    border-radius: 10px;
-
-}
-
 .scrollableElement {
-    overflow-y: scroll;
-    width: 92%;
+    overflow: scroll;
+    justify-self: start;
+    width: 76%;
+    z-index: 1;
     border-radius: 10px;
-    padding: 10px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.34);
+    margin-top: 40px;
     border: 1px solid rgba(0, 0, 0, 0.7);
     background-color: rgba(0, 0, 0, 0.3);
-    height: 430px;
+    height: auto;
+    margin-bottom: 5vh;
+    margin-left: 5vh;
 }
-
 
 .box {
     display: inline-block;
@@ -83,12 +58,10 @@
     color: rgba(220, 219, 225, 0.49);
 }
 
-
 .productCard__priceContainer {
     margin-top: 10px;
     font-weight: 500;
 }
-
 
 .productCard__buttonContainer {
     display: block;
@@ -96,13 +69,14 @@
     font-family: "Raleway", sans-serif;
     text-align: center;
 }
+
 .productCard__addBtn {
-    background: rgba(229, 222, 236, 0.2);
-    color: #dcdbe1;
+    background: rgba(0, 0, 0, 0.24);
+    color: #d2d2d2;
     font-family: "Raleway", sans-serif;
-    border: 1px solid #dcdbe1;
+    border: 1px solid black;
     border-radius: 25px;
-    width: 177px;
+    width: 99.7%;
     height: 37px;
     padding: 0;
     font-size: 18px;
@@ -130,6 +104,7 @@
     font-size: 20px;
     transition: background 0.4s;
 }
+
 .productCard__minusBtn {
     font-weight: 550;
 }

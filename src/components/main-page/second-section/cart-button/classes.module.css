@@ -1,0 +1,34 @@
+.cartBtn {
+    font-family: "Raleway", sans-serif;
+    justify-self: end;
+    border: 1px solid rgba(0, 0, 0, 0.7);
+    border-right: none;
+    border-bottom-left-radius: 10px;
+    background-color: rgba(10, 10, 10, 0.73);
+    padding: 5px 8px;
+    height: 53px;
+    z-index: 10;
+    color: rgb(194, 194, 194);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.34);
+}
+
+.cartBtn a {
+    text-align: center;
+    font-size: 15px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    transition: background 0.3s ease;
+    width: 130px;
+    height: 40px;
+    border-radius: 10px;
+    place-content: center;
+}
+
+
+.cartBtn a:hover {
+    background: rgba(255, 255, 255, 0.25);
+}

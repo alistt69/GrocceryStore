@@ -1,7 +1,7 @@
 import ReactFullpage from "@fullpage/react-fullpage";
 import Header from "../../components/header";
-import FirstSection from "./first-section/firstSection.tsx";
-import SecondSection from "./second-section/secondSection.tsx";
+import FirstSection from "../../components/main-page/first-section";
+import SecondSection from "../../components/main-page/second-section";
 import Footer from "../../components/footer";
 
 const MainPage = () => {
@@ -9,40 +9,20 @@ const MainPage = () => {
     return(
         <>
             <Header page='main' />
-
             <ReactFullpage
 
                 debug
-
                 normalScrollElements="#scrollable-element"
-
-                navigation={false}
                 controlArrows={false}
-
-
+                credits={{enabled: false}}
                 loopTop={true}
                 loopBottom={true}
-
-                licenseKey="xxxxxxxxxxxxxxxxxxxxxxxxx"
-                credits={{enabled: false}}
                 render={() => (
 
                     <ReactFullpage.Wrapper>
-
-                        <div className="section">
-
-                            <FirstSection/>
-
-                        </div>
-
-                        <div className="section">
-
-                            <SecondSection/>
-
-                        </div>
-
+                        <FirstSection />
+                        <SecondSection />
                         <Footer page="" />
-
                     </ReactFullpage.Wrapper>
 
                 )}
