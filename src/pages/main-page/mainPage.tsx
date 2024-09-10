@@ -22,7 +22,7 @@ const MainPage = () => {
                     <ReactFullpage.Wrapper>
                         <FirstSection />
                         <SecondSection />
-                        <Footer page="" />
+                        <Footer page="main-page3" />
                     </ReactFullpage.Wrapper>
 
                 )}

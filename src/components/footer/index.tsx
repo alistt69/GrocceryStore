@@ -16,7 +16,7 @@ const Footer: React.FC<{page: string}> = ({ page }) => {
                     <div><a><FacebookOutlined/></a></div>
                     <div><a><XOutlined/></a></div>
                     <div><a><InstagramOutlined/></a></div>
-                    <h5>©2024. All rights reserved</h5>
+                    <h5>©2024. All rights reserved by @a.listt69</h5>
 
                 </div>
             </div>
