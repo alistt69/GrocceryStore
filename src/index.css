@@ -2,11 +2,25 @@
     --first-bg: linear-gradient(180deg, rgb(225, 188, 188), rgb(229, 194, 226), rgb(208, 201, 224));
     --second-bg: linear-gradient(180deg,  rgb(208, 201, 224), rgb(203, 201, 229), rgb(197, 224, 219));
     --third-bg: linear-gradient(180deg, rgb(197, 224, 219), rgb(200, 229, 202), rgb(220, 213, 191));
+    --header-mrgn: 90px + 1.4rem
 }
 
 
 body {
     font-family: "Raleway", sans-serif;
+}
+
+.fp-section:nth-child(1){
+    place-content: start;
+    background-image: var(--first-bg);
+}
+
+.fp-section:nth-child(2){
+    background-image: var(--second-bg);
+}
+
+.fp-section:nth-child(3){
+    background-image: var(--third-bg);
 }
 
 
@@ -38,18 +52,14 @@ body {
 
 #main-page1 .fp-overflow{
     display: flex;
-    place-content: center;
-    padding: 105px 15px;
-    height: 90%;
-    background-image: var(--first-bg);
+    justify-content: center;
+    padding: calc(90px + 1.4rem) 1.4rem 1.4rem;
 }
 
 #main-page2 .fp-overflow {
     display: flex;
-    place-content: center;
-    padding: 105px 15px;
-    height: 90%;
-    background-image: var(--second-bg);
+    justify-content: center;
+    padding: calc(90px + 1.4rem) 1.4rem 1.4rem;
 }
 
 #main-page3 .fp-overflow {

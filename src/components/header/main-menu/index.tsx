@@ -51,9 +51,9 @@ const MainMenu = () => {
         <>
             <div className={classes.menu__container}>
                 <nav className={classes.menu__navigation}>
-                    <a href="#1" onClick={() => handleTabChange(classes.menu__firstItem)}>Welcome</a>
-                    <a href="#2" onClick={() => handleTabChange(classes.menu__secondItem)}>Catalog</a>
-                    <a href="#3" onClick={() => handleTabChange(classes.menu__thirdItem)}>Contacts</a>
+                    <a href={"#1"} onClick={() => handleTabChange(classes.menu__firstItem)}>Welcome</a>
+                    <a href={"#2"} onClick={() => handleTabChange(classes.menu__secondItem)}>Catalog</a>
+                    <a href={"#3"} onClick={() => handleTabChange(classes.menu__thirdItem)}>Contacts</a>
                     <a onClick={showDrawer}>FAQ</a>
                     <a onClick={() => handleClick('/about')}>About</a>
                     <Drawer title="Frequently Asking Questions" onClose={onClose} open={open}>

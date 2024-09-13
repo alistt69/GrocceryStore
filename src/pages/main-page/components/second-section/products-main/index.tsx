@@ -1,17 +1,13 @@
 import classes from "./classes.module.css";
-import React, {useState} from "react";
+import { useState } from "react";
 import CartButton from "../cart-button";
 import CatalogProducts from "./catalog-products";
+import { useFunctions } from "../../../../../context/context.tsx";
 
 
-const MainProducts: React.FC<{
+const MainProducts = () => {
 
-    products: any,
-    handleAmountChange: (key: string, productName: string, operation: number, productPrice: number) => void,
-    totalAmount: number,
-    showModal: () => void
-
-}> = ({ products, handleAmountChange, totalAmount, showModal }) => {
+    const {products} = useFunctions();
 
     const [activeSlide, setActiveSlide] = useState<string>('MOST-POPULAR');
 
@@ -33,8 +29,8 @@ const MainProducts: React.FC<{
 
                         <div className={classes.catalogPath}>
                             <p>
-                                <a href="#1">WELCOME</a>/
-                                <a href="#2">CATALOG</a>/
+                                <a href={"#1"}>WELCOME</a>/
+                                <a href={"#2"}>CATALOG</a>/
                                 <a style={{color: 'rgba(255, 255, 255, 0.5)', textDecoration: 'underline'}}>{activeSlide}</a>
                             </p>
                         </div>
@@ -44,14 +40,14 @@ const MainProducts: React.FC<{
                             <div className={classes.menu__container}>
                                 <nav className={classes.menu__navigation}>
 
-                                    <a href="#2"
+                                    <a href={"#2"}
                                        onClick={() => handleTabChange(classes.menu__firstItem, 'MOST-POPULAR')}>Catalog</a>
-                                    <a href="#2/1"
+                                    <a href={"#2/1"}
                                        onClick={() => handleTabChange(classes.menu__secondItem, 'FARM-PRODUCTS')}>Farm
                                         products</a>
-                                    <a href="#2/2"
+                                    <a href={"#2/2"}
                                        onClick={() => handleTabChange(classes.menu__thirdItem, 'DRINKS')}>Drinks</a>
-                                    <a href="#2/3"
+                                    <a href={"#2/3"}
                                        onClick={() => handleTabChange(classes.menu__fourthItem, 'FOR-HOME')}>For
                                         home</a>
 
@@ -59,10 +55,10 @@ const MainProducts: React.FC<{
 
                                 </nav>
                             </div>
-                            <CartButton totalAmount={totalAmount} showModal={showModal}/>
+                            <CartButton />
                         </div>
 
-                        <CatalogProducts products={products} handleAmountChange={handleAmountChange} k={key}/>
+                        <CatalogProducts k={key}/>
 
                     </div>
 

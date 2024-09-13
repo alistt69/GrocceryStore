@@ -1,18 +1,23 @@
 import classes from "./classes.module.css";
 import React from "react";
+import {useFunctions} from "../../../../../../context/context.tsx";
 
-const CatalogProducts: React.FC<{
+interface Item {
+    url: string,
+    name: string,
+    price: number,
+    mass: string,
+    amount: number,
+}
 
-    products: any,
-    handleAmountChange: (key: string, productName: string, operation: number, productPrice: number) => void,
-    k: any
+const CatalogProducts: React.FC<{ k: string }> = ({ k }) => {
 
-}> = ({ products, handleAmountChange, k }) => {
+    const {products, handleAmountChange} = useFunctions();
 
     return(
         <>
             <div className={classes.scrollableElement} id="scrollable-element">
-                {products[k].map((product: any, i: number) => (
+                {products[k].map((product: Item, i: number) => (
                     <div className={classes.box} key={i}>
 
                         <div className={classes.productCard__imgContainer}>

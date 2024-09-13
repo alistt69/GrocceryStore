@@ -1,9 +1,9 @@
 import classes from "./classes.module.css";
-import React from "react";
+import { useFunctions } from "../../../../../context/context.tsx";
 
-const CartButton: React.FC<{
-    totalAmount: number, showModal: () => void
-}> = ({ totalAmount, showModal  }) => {
+const CartButton = () => {
+
+    const {showModal, totalAmount} = useFunctions();
 
     return(
         <>

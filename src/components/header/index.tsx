@@ -30,7 +30,8 @@ const Header: React.FC<CurrentPage> = ({ page}) => {
                     </div>
                 </div>
 
-                {page === 'main' ?
+                {
+                    page === 'main' ?
                     <MainMenu /> :
                     <AboutPageMenu />
                 }

@@ -6,7 +6,6 @@
     border-bottom-left-radius: 10px;
     background-color: rgba(10, 10, 10, 0.73);
     padding: 5px 8px;
-    height: 53px;
     z-index: 10;
     color: rgb(194, 194, 194);
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.34);
@@ -31,4 +30,17 @@
 
 .cartBtn a:hover {
     background: rgba(255, 255, 255, 0.25);
+}
+
+@media (max-width: 815px) {
+    .cartBtn {
+        border-bottom-left-radius: 1.4vw;
+        padding: .6vw 1vw;
+    }
+
+    .cartBtn a {
+        font-size: 1.9vw;
+        width: 16vw;
+        height: 5.07vw;
+    }
 }

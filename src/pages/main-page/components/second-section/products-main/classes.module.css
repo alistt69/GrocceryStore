@@ -1,10 +1,9 @@
 .SecondSectionContainer {
     display: grid;
-    grid-template-rows: 4vh 50px auto;
+    grid-template-rows: auto auto auto;
     justify-items: center;
     font-family: "Raleway", sans-serif;
     width: 100%;
-    max-width: 1400px;
     border: 1px solid rgba(0, 0, 0, 0.7);
     background-color: rgba(0, 0, 0, 0.3);
     color: rgba(255, 255, 255, 0.91);
@@ -26,14 +25,14 @@
 
 .catalogPath {
     position: relative;
-    height: 4vh;
+    height: 3vh;
     width: 100%;
     padding-left: 15px;
     background-color: black;
 }
 
 .catalogPath p {
-    font-size: 1vw;
+    font-size: 1.85vh;
     margin: 0;
     font-weight: 550;
     position: absolute;
@@ -55,14 +54,15 @@
 
 .navigation1__container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 100%;
     height: 54px;
+    grid-template-columns: auto auto;
+    width: 100%;
 }
 
 .menu__container {
+    display: flex;
+    justify-content: space-around;
     justify-self: start;
-    width: 550px;
     padding-left: 7px;
     padding-right: 7px;
     border: 1px solid rgba(0, 0, 0, 0.7);
@@ -74,7 +74,6 @@
 .menu__navigation {
     position: relative;
     height: 30px;
-    font-size: 0;
     font-family: "Raleway", sans-serif;
 }
 
@@ -138,6 +137,91 @@
     width: 150px;
     left: 400px;
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+@media (max-width: 815px) {
+
+    .catalogPath p {
+        font-size: 1.7vw;
+    }
+
+    .navigation1__container {
+        height: 6.5vw;
+    }
+
+    .menu__container {
+        padding-left: 0.8867vw;
+        padding-right: 0.8867vw;
+        border-bottom-right-radius: 1.4vw;
+    }
+
+    .menu__navigation {
+        position: relative;
+        height: 4vw;
+    }
+
+    .menu__navigation a {
+        margin-top: 2.15vw;
+        font-size: 1.8vw;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: white;
+        cursor: pointer;
+    }
+
+    .menu__navigation .animation {
+        position: absolute;
+        height: 5vw;
+        top: 20%;
+        z-index: 0;
+        transition: all .5s ease 0s;
+        border-radius: .9vw;
+    }
+
+    .menu__navigation a:nth-child(1) {
+        width: 15vw;
+    }
+
+    .menu__navigation a:nth-child(2) {
+        width: 20vw;
+    }
+
+    .menu__navigation a:nth-child(3) {
+        width: 15vw;
+    }
+
+    .menu__navigation a:nth-child(4) {
+        width: 19vw;
+    }
+
+    .menu__navigation .menu__firstItem, a:nth-child(1):hover~.animation {
+        width: 15vw;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .menu__navigation .menu__secondItem, a:nth-child(2):hover~.animation {
+        width: 20vw;
+        left: 15vw;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .menu__navigation .menu__thirdItem, a:nth-child(3):hover~.animation {
+        width: 15vw;
+        left: 35vw;
+        background-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .menu__navigation .menu__fourthItem, a:nth-child(4):hover~.animation {
+        width: 19vw;
+        left: 50vw;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
 }
 
 

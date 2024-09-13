@@ -3,24 +3,18 @@ import CartProducts from "../products-cart";
 import React, {useEffect, useRef, useState} from "react";
 import {notification} from "antd";
 import {CheckCircleOutlined, CloseCircleOutlined} from "@ant-design/icons";
+import {useFunctions} from "../../../../../context/context.tsx";
 
-const ModalContent: React.FC<{
-    resetAmounts: () => void,
-    setTotalAmount: (arg: number) => void,
-    handleAmountChange: (key: string, productName: string, operation: number, productPrice: number) => void,
-    products: any,
-    setOpen: (arg: boolean) => void,
-    totalPrice: number,
-}> = ({ resetAmounts, setTotalAmount, products, setOpen, handleAmountChange, totalPrice }) => {
+const ModalContent = () => {
 
+    const {resetAmounts, setTotalAmount, setOpen, open, totalPrice} = useFunctions();
+    
     const [selectedOption, setSelectedOption] = useState<string>('');
     const [deliveryTime, setDeliveryTime] = useState<string>('')
-
 
     const handleOptionChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setSelectedOption(event.target.value);
     };
-
 
     const [inputValue, setInputValue] = useState<string>('');
 
@@ -28,15 +22,18 @@ const ModalContent: React.FC<{
         setInputValue(event.target.value);
     };
 
-
-    const intervalIDRef = useRef<any>(null);
+    const intervalIDRef = useRef<NodeJS.Timeout | null>(null);
 
     useEffect(() => {
         intervalIDRef.current = setInterval(() => {
             setDeliveryTime(new Date(new Date().getTime() + 30 * 60000).toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit', hour12: false }))
         }, 1000)
 
-        return () => clearInterval(intervalIDRef.current);
+        return () => {
+            if (intervalIDRef.current !== null) {
+                clearInterval(intervalIDRef.current);
+            }
+        };
     }, [open])
 
     const [api, contextHolder] = notification.useNotification();
@@ -74,7 +71,7 @@ const ModalContent: React.FC<{
         <>
             <div className={classes.modalCart__body}>
                 <div className={classes.modalCart__itemsContainer}>
-                    <CartProducts products={products} handleAmountChange={handleAmountChange}/>
+                    <CartProducts />
                     <div className={classes.modalCart__totalPrice}>
                         TOTAL: ${totalPrice / 100}
                     </div>

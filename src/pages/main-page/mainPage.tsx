@@ -1,7 +1,7 @@
 import ReactFullpage from "@fullpage/react-fullpage";
 import Header from "../../components/header";
-import FirstSection from "../../components/main-page/first-section";
-import SecondSection from "../../components/main-page/second-section";
+import FirstSection from "./components/first-section";
+import SecondSection from "./components/second-section";
 import Footer from "../../components/footer";
 
 const MainPage = () => {

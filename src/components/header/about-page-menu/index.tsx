@@ -14,10 +14,10 @@ const AboutPageMenu = () => {
             <div className={classes.menu__container}>
                 <nav className={classes.menu__navigation}>
 
-                    <a href="#1" onClick={() => handleTabChange(classes.menu__firstItem)}>About</a>
-                    <a href="#2" onClick={() => handleTabChange(classes.menu__secondItem)}>Our team</a>
-                    <a href="#3" onClick={() => handleTabChange(classes.menu__thirdItem)}>Promocodes</a>
-                    <a href="#4" onClick={() => handleTabChange(classes.menu__fourthItem)}>Contact</a>
+                    <a href={"#1"} onClick={() => handleTabChange(classes.menu__firstItem)}>About</a>
+                    <a href={"#2"} onClick={() => handleTabChange(classes.menu__secondItem)}>Our team</a>
+                    <a href={"#3"} onClick={() => handleTabChange(classes.menu__thirdItem)}>Promocodes</a>
+                    <a href={"#4"} onClick={() => handleTabChange(classes.menu__fourthItem)}>Contact</a>
 
                     <div className={`${classes.animation} ${activeTab}`}></div>
 

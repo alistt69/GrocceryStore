@@ -1,10 +1,16 @@
 import classes from "./classes.module.css";
-import React from "react";
+import { useFunctions } from "../../../../../context/context.tsx";
 
-const CartProducts: React.FC<{
-    products: any,
-    handleAmountChange: (key: string, productName: string, operation: number, productPrice: number) => void 
-}> = ({ products, handleAmountChange }) => {
+interface Item {
+    url: string,
+    name: string,
+    price: number,
+    mass: string,
+    amount: number,
+}
+
+const CartProducts = () => {
+    const {products, handleAmountChange} = useFunctions();
 
     return(
         <>
@@ -12,8 +18,8 @@ const CartProducts: React.FC<{
                 {Object.keys(products).map((key: string) => (
 
                     products[key]
-                        .filter((product: any) => product.amount !== 0)
-                        .map((product: any, i: number) => (
+                        .filter((product: Item) => product.amount !== 0)
+                        .map((product: Item, i: number) => (
                             <div className={classes.modalCart__itemCards} key={i}>
                                 <div className={classes.itemCard__imgContainer}>
                                     <img src={product.url} alt={""}/>

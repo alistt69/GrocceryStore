@@ -1,15 +1,11 @@
-import React, { useRef, useState } from "react";
-import { Modal } from 'antd';
-import type { DraggableData, DraggableEvent } from 'react-draggable';
-import Draggable from 'react-draggable';
-import classes from "./classes.module.css";
-import MainProducts from "./products-main";
-import ModalContent from "./modal-content";
+import React, {createContext, useContext, useRef, useState} from 'react';
+import type {DraggableData, DraggableEvent} from "react-draggable";
 
 interface Item {
     url: string,
     name: string,
     price: number,
+    mass: string
     amount: number,
 }
 
@@ -17,18 +13,43 @@ interface products {
     [category: string]: Item[];
 }
 
-const SecondSection = () => {
+interface ContextType {
+    handleAmountChange: (category: string, name: string, operation: number, price: number) => void;
+    products: products,
+    setProducts: (products: products) => void,
+    totalAmount: number,
+    setTotalAmount: (totalAmount: number) => void,
+    resetAmounts: () => void,
+    open: boolean,
+    setOpen: (open: boolean) => void,
+    showModal: () => void,
+    disabled: boolean,
+    setDisabled: (setDisabled: boolean) => void,
+    bounds: {left: number, top: number, bottom: number, right: number},
+    handleOk: () => void,
+    handleCancel: () => void,
+    onStart: (event: DraggableEvent, uiData: DraggableData) => void,
+    totalPrice: number,
+    draggleRef: React.RefObject<HTMLDivElement>
+}
+
+const FunctionsContext = createContext<ContextType | undefined>(undefined);
+
+export const FunctionsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
     const [products, setProducts] = useState<products>(() => {
         const storedProducts = localStorage.getItem('products');
         return storedProducts ? JSON.parse(storedProducts) : {
             mostPopular: [
-                {url: "/src/images/products/good3.jpg", name: 'FRUIT MIX', mass: '500g', price: 1000, amount: 0},
-                {url: "/src/images/products/good3.jpg", name: 'Item 1', mass: '500g', price: 20000, amount: 0},
-                {url: "/src/images/products/good3.jpg", name: 'Item 2', mass: '500g', price: 2, amount: 0},
-                {url: "/src/images/products/good3.jpg", name: 'Item 3', mass: '500g', price: 2000, amount: 0},
-                {url: "/src/images/products/good3.jpg", name: 'Item 4', mass: '500g', price: 200, amount: 0},
-                {url: "/src/images/products/good3.jpg", name: 'Item 5', mass: '500g', price: 200, amount: 0},
+                {url: "/src/images/products/most-popular/chips.lpg", name: "Lay's crab", mass: '140g', price: 299, amount: 0},
+                {url: "/src/images/products/most-popular/milk.jpg", name: 'Milk', mass: '980ml', price: 200, amount: 0},
+                {url: "/src/images/products/good3.jpg", name: 'Tomatoes', mass: '1kg', price: 99, amount: 0},
+                {url: "/src/images/products/good3.jpg", name: 'Sour cream', mass: '280g', price: 175, amount: 0},
+                {url: "/src/images/products/good3.jpg", name: 'Mozzarella', mass: '400g', price: 500, amount: 0},
+                {url: "/src/images/products/good3.jpg", name: 'Bread', mass: '120g', price: 69, amount: 0},
+                {url: "/src/images/products/good3.jpg", name: 'Eggs C1', mass: '10 pcs', price: 2000, amount: 0},
+                {url: "/src/images/products/good3.jpg", name: 'KitKat', mass: '35g', price: 100, amount: 0},
+                {url: "/src/images/products/good3.jpg", name: 'Monster mango-loco', mass: '480ml', price: 249, amount: 0},
             ],
             farmProducts: [
                 {url: "/src/images/products/good3.jpg", name: 'Fruit mix2', mass: '500g', price: 100, amount: 0},
@@ -110,29 +131,29 @@ const SecondSection = () => {
     const resetAmounts = () => {
         setProducts((prevProducts) => ({
             ...prevProducts,
-            mostPopular: prevProducts.mostPopular.map((product: any) => ({ ...product, amount: 0 })),
-            farmProducts: prevProducts.farmProducts.map((product: any) => ({ ...product, amount: 0 })),
-            drinks: prevProducts.drinks.map((product: any) => ({ ...product, amount: 0 })),
-            forHome: prevProducts.forHome.map((product: any) => ({ ...product, amount: 0 })),
+            mostPopular: prevProducts.mostPopular.map((product: Item) => ({ ...product, amount: 0 })),
+            farmProducts: prevProducts.farmProducts.map((product: Item) => ({ ...product, amount: 0 })),
+            drinks: prevProducts.drinks.map((product: Item) => ({ ...product, amount: 0 })),
+            forHome: prevProducts.forHome.map((product: Item) => ({ ...product, amount: 0 })),
         }));
     };
 
     const [open, setOpen] = useState(false);
-    const [disabled, setDisabled] = useState(true);
-    const [bounds, setBounds] = useState({ left: 0, top: 0, bottom: 0, right: 0 });
-    const draggleRef = useRef<HTMLDivElement | null>(null);
 
     const showModal = () => {
         setOpen(true);
     };
 
-    const handleOk = (e: React.MouseEvent<HTMLElement>) => {
-        console.log(e);
+    const [disabled, setDisabled] = useState(true);
+    const [bounds, setBounds] = useState({ left: 0, top: 0, bottom: 0, right: 0 });
+    const draggleRef = useRef<HTMLDivElement | null>(null);
+
+
+    const handleOk = () => {
         setOpen(false);
     };
 
-    const handleCancel = (e: React.MouseEvent<HTMLElement>) => {
-        console.log(e);
+    const handleCancel = () => {
         setOpen(false);
     };
 
@@ -150,65 +171,37 @@ const SecondSection = () => {
         });
     };
 
+    return (
+        <FunctionsContext.Provider value={{
+            handleAmountChange,
+            products,
+            setProducts,
+            totalAmount,
+            setTotalAmount,
+            resetAmounts,
+            open,
+            setOpen,
+            showModal,
+            disabled,
+            setDisabled,
+            bounds,
+            handleOk,
+            handleCancel,
+            onStart,
+            totalPrice,
+            draggleRef,
+        }}>
+            {children}
+        </FunctionsContext.Provider>
+    );
+};
 
-    return(
-        <>
-            <div className="section" id="main-page2">
+// eslint-disable-next-line react-refresh/only-export-components
+export const useFunctions = () => {
+    const context = useContext(FunctionsContext);
+    if (!context) {
+        throw new Error;
+    }
 
-                <Modal
-                    title={
-                        <div
-                            style={{width: 'auto', cursor: 'move', margin: '0', paddingLeft: '20px'}}
-                            onMouseOver={() => {
-                                if (disabled) {
-                                    setDisabled(false);
-                                }
-                            }}
-                            onMouseOut={() => {
-                                setDisabled(true);
-                            }}
-
-                            onFocus={() => {
-                            }}
-                            onBlur={() => {
-                            }}
-
-                            className={classes.modalCart__header}
-                        >
-                            YOUR CART
-                        </div>
-                    }
-                    centered
-                    open={open}
-                    onOk={handleOk}
-                    onCancel={handleCancel}
-                    width={700}
-                    className='modalCart'
-                    modalRender={(modal) => (
-                        <Draggable
-                            disabled={disabled}
-                            bounds={bounds}
-                            nodeRef={draggleRef}
-                            onStart={(event, uiData) => onStart(event, uiData)}
-                        >
-                            <div ref={draggleRef}>{modal}</div>
-                        </Draggable>
-                    )}
-                >
-                    <ModalContent totalPrice={totalPrice}
-                                  setTotalAmount={setTotalAmount}
-                                  handleAmountChange={handleAmountChange}
-                                  setOpen={setOpen}
-                                  products={products}
-                                  resetAmounts={resetAmounts} />
-                </Modal>
-
-
-                <MainProducts products={products} handleAmountChange={handleAmountChange} totalAmount={totalAmount} showModal={showModal} />
-            </div>
-        </>
-    )
-
-}
-
-export default SecondSection;
+    return context;
+};
