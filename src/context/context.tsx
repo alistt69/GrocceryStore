@@ -41,7 +41,7 @@ export const FunctionsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
         const storedProducts = localStorage.getItem('products');
         return storedProducts ? JSON.parse(storedProducts) : {
             mostPopular: [
-                {url: "/src/images/products/most-popular/chips.jpg", name: "Lay's crab", mass: '140g', price: 299, amount: 0},
+                {url: "/src/images/products/most-popular/chips.jpg", name: "Chips with salt", mass: '140g', price: 299, amount: 0},
                 {url: "/src/images/products/most-popular/milk.jpg", name: 'Milk', mass: '980ml', price: 200, amount: 0},
                 {url: "/src/images/products/good3.jpg", name: 'Tomatoes', mass: '1kg', price: 99, amount: 0},
                 {url: "/src/images/products/good3.jpg", name: 'Sour cream', mass: '280g', price: 175, amount: 0},
