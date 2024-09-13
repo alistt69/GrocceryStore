@@ -1,6 +1,6 @@
 import ReactFullpage from "@fullpage/react-fullpage";
 import Header from "../../components/header";
-import Slides from "../../components/about-page/slides";
+import Slides from "./components/slides";
 import Footer from "../../components/footer";
 
 const AboutPage = () => {
@@ -11,6 +11,7 @@ const AboutPage = () => {
             <ReactFullpage
 
                 debug
+                normalScrollElements="#scrollable-element"
                 controlArrows={false}
                 credits={{enabled: false}}
                 loopTop={true}

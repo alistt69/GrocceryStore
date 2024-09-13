@@ -1,5 +1,6 @@
 .aboutPage__slidesContentContainer {
     justify-self: center;
+    overflow: scroll;
     width: 100%;
     height: auto;
     max-height: 69vh;
