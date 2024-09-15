@@ -117,12 +117,12 @@ const Slides = () => {
         <>
             {Object.keys(slides).map((key, index) => (
                 <div key={index} className="section" id={`about-page${index + 1}`}>
-                    <div className={classes.aboutPage__slidesContentContainer} id='scrollable-element'>
+                    <div className={classes.aboutPage__slidesContentContainer}>
 
                         <div className={classes.aboutPage__slidesTitleContainer}>
                             <p>{key.replace(/([A-Z])/g, ' $1').trim().toUpperCase()}</p>
                         </div>
-                        <div className={classes.aboutPage__slidesDescriptionContainer}>
+                        <div className={classes.aboutPage__slidesDescriptionContainer} id='scrollable-element'>
                             {slides[key as SlideKeys]}
                         </div>
 

@@ -1,4 +1,5 @@
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import { paths } from "./routes/routes.ts"
 import MainPage from "./pages/main-page/mainPage.tsx";
 import AboutPage from "./pages/about-page/aboutPage.tsx";
 
@@ -9,8 +10,8 @@ const App = () => {
         <>
             <Router>
                 <Routes>
-                    <Route path="/" element={<MainPage />} />
-                    <Route path="/about" element={<AboutPage />} />
+                    <Route path={paths.MAIN} element={<MainPage />} />
+                    <Route path={paths.ABOUT} element={<AboutPage />} />
                 </Routes>
             </Router>
         </>
